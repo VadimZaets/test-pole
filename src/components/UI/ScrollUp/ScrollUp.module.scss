@@ -1,0 +1,56 @@
+.scrollup {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    rotate: 0deg;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    background-color: var(--accent-color);
+    rotate: 360deg;
+  }
+
+  &:hover &_first,
+  &:hover &_second {
+    background-color: var(--second-text-color);
+  }
+
+  &:hover &_wrapp {
+    box-shadow: none;
+  }
+
+  &_wrapp {
+    position: relative;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--scroll-color);
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px -2px var(--box-shadow-color);
+  }
+
+  &_first {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    rotate: 45deg;
+    left: 18px;
+    top: 15px;
+    background-color: var(--primary-text-color);
+  }
+  &_second {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    rotate: -45deg;
+    right: 17px;
+    top: 15px;
+    background-color: var(--primary-text-color);
+  }
+}

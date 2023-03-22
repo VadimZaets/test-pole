@@ -1,0 +1,109 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px 25px;
+  margin-top: 94px;
+  width: 280px;
+  height: 480px;
+  background-color: transparent;
+  @media screen and (min-width: 1440px) {
+    width: 450px;
+  }
+
+  &_wrapper {
+    height: 138px;
+    width: 92px;
+    background-color: var(--accent-color);
+    position: fixed;
+    top: calc(50% - 138px / 2);
+    left: calc(50% - 92px / 2);
+    position: relative;
+    box-shadow: 2px 8px 16px hsl(236deg 6% 49% / 80%);
+  }
+
+  & span.loader_text_logo {
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    width: 100%;
+    height: 100%;
+    font-size: 76px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--box-shadow-color);
+    // animation: loaderLetter 6s linear 0s infinite both;
+
+    &:nth-of-type(1) {
+      transform: translate(35px, 95px);
+      // animation: loaderScale 4s linear 2s infinite both;
+    }
+    &:nth-of-type(2) {
+      transform: translate(112px, 95px);
+      // animation: loaderScale 4s linear 3s infinite both;
+    }
+    &:nth-of-type(3) {
+      transform: translate(112px, 0px);
+      // animation: loaderScale 4s linear 1s infinite both;
+    }
+    &:nth-of-type(4) {
+      transform: translate(35px, 0px);
+      // animation: loaderScale 4s linear 0s infinite both;
+    }
+  }
+
+  &_text {
+    position: absolute;
+    text-transform: uppercase;
+    overflow: hidden;
+    top: 45%;
+    left: 5px;
+    font-size: 14px;
+    width: 10%;
+    color: var(--second-text-color);
+    animation: loaderLoading1 3s linear 0s infinite both;
+    border-right: 1px solid var(--second-text-color);
+  }
+}
+
+@keyframes loaderLetter {
+  30% {
+    opacity: 0;
+  }
+  45% {
+    transform: translate(70%, 30%);
+  }
+
+  55% {
+    transform: translate(70%, 30%);
+  }
+  70% {
+    opacity: 0;
+  }
+}
+
+@keyframes loaderLoading {
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes loaderLoading1 {
+  40% {
+    width: 100%;
+  }
+}
+
+@keyframes loaderScale {
+  35% {
+    scale: 1;
+    text-shadow: 2px 2px 5px var(--box-shadow-color);
+  }
+  50% {
+    scale: 1.2;
+    text-shadow: 5px 15px 17px var(--box-shadow-color);
+  }
+  65% {
+    scale: 1;
+    text-shadow: 2px 2px 5px var(--box-shadow-color);
+  }
+}

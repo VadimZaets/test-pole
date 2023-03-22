@@ -1,0 +1,234 @@
+.function {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+  }
+  @media screen and (min-width: 1000px) {
+    padding-bottom: 25px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+}
+.list_item {
+  display: flex;
+
+  flex-direction: column;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1000px) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1440px) {
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+.wrapp {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 480px) {
+    width: 300px;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 500px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.text {
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+.img_wrapp {
+  position: relative;
+  width: auto;
+  min-height: 230px;
+  @media screen and (min-width: 480px) {
+    width: 440px;
+    height: 336px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 363px;
+    height: 278px;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 450px;
+    height: 346px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 530px;
+    height: 500px;
+  }
+}
+.img_wrapp_mob {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.img_wrapp_desc {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.image_spiral {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: -5%;
+    width: 68px;
+    height: 58px;
+  }
+  @media screen and (min-width: 1000px) {
+    top: 15%;
+    left: -10%;
+    width: 150px;
+    height: 125px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 28%;
+    left: -12%;
+    width: 214px;
+    height: 178px;
+  }
+}
+
+.image_zigzag {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+    bottom: 24%;
+    right: -5%;
+    width: 94px;
+    height: 55px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    bottom: 40%;
+    right: -10%;
+    width: 170px;
+    height: 100px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    bottom: 28%;
+    right: -14%;
+    width: 260px;
+    height: 150px;
+  }
+}
+
+// ================================ Line position ==========================
+
+.line_wrapp_t1 {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  z-index: -1;
+  width: 115px;
+  height: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 116px;
+    top: 29%;
+    right: 10%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 146px;
+    top: 38%;
+    right: 52%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 147px;
+    top: 42%;
+    right: 21%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 153px;
+    right: 29%;
+  }
+}
+
+.line_wrapp_t2 {
+  position: absolute;
+  top: 17%;
+  right: 4%;
+  z-index: -1;
+  width: 89px;
+  height: auto;
+  @media screen and (min-width: 768px) {
+    width: 130px;
+    top: 35%;
+    right: 58%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    top: 21%;
+    right: 14%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 120px;
+    right: 25%;
+  }
+}
+
+.line_wrapp_t3 {
+  position: absolute;
+  top: 17%;
+  right: 23%;
+  z-index: -1;
+  width: 106px;
+  height: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 140px;
+    top: 31%;
+    right: 54%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    top: 18%;
+    right: 33%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 140px;
+    right: 39%;
+  }
+}

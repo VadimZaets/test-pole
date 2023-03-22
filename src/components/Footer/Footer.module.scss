@@ -1,0 +1,228 @@
+.footer {
+  background-color: #1a1a1a;
+}
+.top_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px 25px 0;
+
+  .left_section {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+// ===============   social link ===========================
+.social_title {
+  font-size: 18px;
+  color: #f8f7f3;
+  margin-top: 30px;
+  @media screen and (min-width: 768px) {
+      font-size: 20px;
+      margin-top:116px;
+    }
+  @media screen and (min-width: 1000px) {
+      font-size: 24px;
+    
+  }
+    @media screen and (min-width: 1000px) {
+      margin-top: 75px;
+  
+    }
+}
+.social_list {
+  display: flex;
+  margin-top: 25px;
+}
+.social_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-right: 16px;
+  transition: all 0.4s;
+}
+.social_link:hover {
+  background-color: var(--accent-color);
+}
+.social_icon {
+  width: 22px;
+  height: 22px;
+  fill: #f8f7f3;
+}
+.social_mob_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+      
+@media screen and (min-width: 768px) {
+   display: none;
+  }
+}
+// ==================== Right section ========================
+.right_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+@media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+    @media screen and (min-width: 1000px) {
+    width: 50%;
+    }
+ 
+}
+.right_title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--second-text-color);
+  @media screen and (min-width: 480px) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+   @media screen and (min-width: 1000px) {
+      font-size: 40px;
+              
+    }
+   @media screen and (min-width: 1440px) {
+      font-size: 48px;
+    
+    }
+}
+.right_text {
+  // width: 523px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 34px;
+  margin-bottom: 30px;
+  color: var(--second-text-color);
+  @media screen and (min-width: 768px) {
+   font-size: 18px;
+   line-height: 21px;
+   margin-top: 40px;
+   margin-bottom: 40px;
+    }
+   @media screen and (min-width: 1440px) {
+   font-size: 20px;
+   margin-top: 30px;
+   margin-bottom: 50px;
+      
+    }
+}
+
+.right_list {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+   margin-top: 114px;
+     
+    }
+  @media screen and (min-width: 1000px) {
+   margin-top: 120px;
+    
+    }
+    @media screen and (min-width: 1440px) {
+      margin-top: 100px;
+        
+    }
+}
+.right_item:not(:last-child) {
+  margin-right: 15px;
+  @media screen and (min-width: 768px) {
+      margin-right: 20px;
+  
+    }
+  @media screen and (min-width: 1000px) {
+      margin-right: 30px;
+      
+ }
+}
+.right_link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--second-text-color);
+  transition: all 0.4s;
+  @media screen and (min-width: 480px) {
+      font-size: 15px;
+      line-height: 19px;
+    }
+         @media screen and (min-width: 1000px) {
+           font-size: 18px;
+           line-height: 21px;
+         }
+}
+.right_link:hover {
+  color: var(--accent-color);
+}
+
+
+// =============== bottom section ===================
+.bottom_line {
+  border-top: 1px solid #d6d6d6;
+}
+.bottom_section {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 25px 0px 25px 0;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    
+    }
+
+  
+}
+.bottom_text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f8f7f3;
+  margin-top: 14px;
+  
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
+.bottom_list {
+  display: flex;
+}
+.bottom_item:not(:last-child){
+  margin-right: 15px;
+  
+    @media screen and (min-width: 480px) {
+      margin-right: 20px;
+    }
+  @media screen and (min-width: 1000px) {
+    margin-right: 30px;
+  }
+}
+.bottom_link {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #f8f7f3;
+  transition: all 0.4s;
+  background-color: #1a1a1a;
+  border: none;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+    line-height: 28px;
+    }
+}
+
+a.bottom_link:first-child {
+  color: var(--accent-color);
+ 
+}
+
+.bottom_link:hover {
+  color: var(--accent-color);
+}

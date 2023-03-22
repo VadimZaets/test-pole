@@ -1,0 +1,43 @@
+.policelicense {
+  width: 80vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 30px 25px;
+  margin-top: 8vh;
+  background-color: var(--primary-bg-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &_text {
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--logo-box-shadow-color);
+    border-radius: 7px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: var(--scroll-color);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--accent-color);
+    }
+  }
+  &_nextStr:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
