@@ -1,31 +1,17 @@
-# Get NPM packages
-FROM node:16.18.0-alpine AS dependencies
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY package.json package-lock.json ./
+FROM node:16.18.0-slim
+
+# Create and change to the app directory.
+WORKDIR /usr/app
+
+# Copy application dependency manifests to the container image.
+# A wildcard is used to ensure copying both package.json AND package-lock.json (when available).
+# Copying this first prevents re-running npm install on every code change.
+COPY . .
+
+# Install production dependencies.
+# If you add a package-lock.json, speed your build by switching to 'npm ci'.
 RUN npm ci --only=production
 
-# Rebuild the source code only when needed
-FROM node:16.18.0-alpine AS builder
-WORKDIR /app
-COPY . .
-COPY --from=dependencies /app/node_modules ./node_modules
 RUN npm run build
-
-# Production image, copy all the files and run next
-FROM node:16.18.0-alpine AS runner
-WORKDIR /app
-
-ENV NODE_ENV production
-
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
-USER test-pole
-EXPOSE 3000
 
 CMD ["npm", "start"]
