@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from "react-query";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://poleplatform-rest-api.lm.r.appspot.com/";
 
 export const GetQuestionsApi = () => {
   return useQuery("getQuestions", async () => {

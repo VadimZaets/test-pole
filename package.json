@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "lint": "next lint"
+    "start": "next start -p 8080",
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "netlify deploy -p"
   },
   "dependencies": {
     "@next/font": "13.1.5",
